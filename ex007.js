@@ -44,7 +44,7 @@ fruitList.forEach(function(fruit){
     console.log(fruit)
 });
 console.log();
-fruitList.forEach(fruit => console.log(fruit));
+fruitList.forEach(fruit => {console.log(fruit); console.log(`${fruit.name} is lovely!`); });
 
 console.log();
 

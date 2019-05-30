@@ -16,7 +16,9 @@ console.log();
 //071
 const splitDate = Date();
 console.log(splitDate.split(' ')[0]);
+const splited = ['grape', 'me'];
 console.log(splitDate.split(' '));
+console.log(splited);
 
 console.log();
 
@@ -78,7 +80,7 @@ console.log();
 //076 - .{(n), (m)} 중괄호 : n개 ~ m개 있다
 const regStr3='<h1>Kim Yewon</h1> <h2>High School Student</h2>';
 const regStrDiv='<div>Kim Yewon</div><h2>High School Student</h2>';
-const result8 = regStr3.replace(/<.{0,1}h1>/g, ' ');
+const result8 = regStr3.replace(/<.{0,1}..>/g, 'ㅇㅋ?'); //..이 h1, h2을 찾음
 const result9 = regStrDiv.replace(/<.{0,4}>/g, ' ');
 
 console.log(result8);
@@ -98,7 +100,7 @@ console.log();
 
 //078 - .match()
 const regStr5='(<h1>Kim Yewon</h1>)';
-const matched = regStr5.match(/[a-z]{1,3}/g);
+const matched = regStr5.match(/[a-z]{3}/g); //대소문자 구분
 console.log(matched);
 console.log();
 
@@ -117,4 +119,6 @@ setInterval(printGood, 200);
 
 //081
 const playFunction = setInterval(() => console.log('I score!'), 2000);
-setTimeout(() => {clearInterval(playFunction);}, 5000);
+setTimeout(() => {clearInterval(playFunction);}, 5000); //setInterval - playFunction이 두 번 실행되고 / setTimeout - 1초 후(5초 후) 실행 중지시킴
+
+cons
