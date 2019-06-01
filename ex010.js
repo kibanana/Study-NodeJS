@@ -86,12 +86,12 @@ studentList.forEach((student) => {
 console.log();
 
 //048
-//함수 선언식 (Function declaration)
+// 함수 선언식 (Function declaration)
 function printHello() {
     console.log('hello');
 }
 
-//함수 표현식 (Function expression)
+// 함수 표현식 (Function expression)
 const printWelcome = function() {
     console.log('welcome');
 };
@@ -125,7 +125,6 @@ console.log(calculate(200,10, divide));
 add.attr = 'function';
 add.date = '2019/05/17';
 console.dir(add); //동적으로 프로퍼티 할당
-
 
 console.log();
 

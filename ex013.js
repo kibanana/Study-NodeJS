@@ -38,7 +38,7 @@ console.log(strArr);
 
 const numArr = [5,2,6,4];
 numArr.sort();
-console.log(numArr); //내림차림의 경우 .sort() 후 .reverse()
+console.log(numArr); //내림차순의 경우 .sort() 후 .reverse()
 
 console.log();
 

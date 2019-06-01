@@ -119,6 +119,4 @@ setInterval(printGood, 200);
 
 //081
 const playFunction = setInterval(() => console.log('I score!'), 2000);
-setTimeout(() => {clearInterval(playFunction);}, 5000); //setInterval - playFunction이 두 번 실행되고 / setTimeout - 1초 후(5초 후) 실행 중지시킴
-
-cons
+setTimeout(() => {clearInterval(playFunction);}, 5000); //setInterval - 4초동안 playFunction이 두 번 실행되고 / setTimeout - 1초 후(5초 후) 실행 중지시킴

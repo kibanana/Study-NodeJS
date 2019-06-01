@@ -1,9 +1,10 @@
 //011
+// is Not a Number
 const num1 = isNaN(123);
 const num2 = isNaN(-123);
 const num3 = isNaN(123.123);
-const num4 = isNaN('123');
-const num5 = isNaN('123yes');
+const num4 = isNaN('123'); //false
+const num5 = isNaN('123yes'); //true
 const num6 = isNaN('hello');
 
 console.log('123 : ', num1);
@@ -12,7 +13,6 @@ console.log('123.123 : ', num3);
 console.log('123 : ', num4);
 console.log('123yes문자열 : ', num5);
 console.log('hello문자열 : ', num6);
-//문자를 담은 문자열만 is Not a Number - true
 console.log();
 
 //012

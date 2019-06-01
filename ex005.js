@@ -3,10 +3,10 @@ const pi = 3.14;
 const name = 'Kim Yewon';
 console.log(typeof name);
 console.log(typeof 'hello');
-console.log(typeof '20'); //isNaN, typeof 모두 숫자 값을 가진 문자형을 string으로 인식
-console.log(typeof pi);
+console.log(typeof '20'); // string
+console.log(typeof pi); // number
 console.log(typeof 30);
-console.log(typeof []);
+console.log(typeof []); // object
 console.log(typeof {});
 console.log();
 
@@ -18,7 +18,9 @@ const isTrue = true;
 const isFalse = false;
 
 console.log(isTrue);
+console.log(!isTrue);
 console.log(isFalse);
+console.log(!isFalse);
 
 console.log(typeof true);
 console.log(typeof (true));
