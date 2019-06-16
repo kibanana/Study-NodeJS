@@ -28,7 +28,7 @@ console.log();
 // 097
 const factorial = (n) => {
     if(n===0) return 1;
-    console.log('n : ', n);
+    console.log('n : ', n*(n-1));
     return n * factorial(n-1);
 };
 console.log(factorial(5));
@@ -37,7 +37,7 @@ console.log();
 
 // 098
 const fibonacci = (num) => {
-    console.log('a');
+    console.log('num : ', num);
     if(num <= 1) return 1;
     return fibonacci(num-1) + fibonacci(num-2);
 };
@@ -48,17 +48,17 @@ console.log();
 // 099
  const scores = [85,95,76];
 
-// const sum = (list, total, length) => {
-//     if(length === list.length) return total;
-//     return sum(list, total + list[length], length -1);
-// };
-// console.log(sum(scores, 0, 0));
+const sum = (list, total, idx) => {
+    if(idx === list.length) return total;
+    return sum(list, total + list[idx], idx+1);
+};
+console.log('sum : ', sum(scores, 0, 0));
 
 console.log();
 
 // 100
-const average = (list, total, length) => {
-    if(length === list.length) return total / length;
-    return average(list, total+list[length], length+1);
+const average = (list, total, idx) => {
+    if(idx === list.length) return total / idx;
+    return average(list, total+list[idx], idx+1);
 };
 console.log('average : ' + average(scores, 0, 0));
