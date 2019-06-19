@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/kyw017763/Study_NodeJS#readme",
   "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   }
 }
