@@ -15,7 +15,8 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(__dirname, 'html')));
 
-app.use('/', route);
+// 위에서 path.join을 해주었으므로 .use 만 사용하면 됨
+app.use(route);
 
 app.use((req, res, next) => { // 404 처리 부분
   res.status(404).send('일치하는 주소가 없습니다!');
