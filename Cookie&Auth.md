@@ -31,7 +31,8 @@ parse에 없는 cookie를 넣으면 오류(undefined) 발생하며 서버 종료
 
 보완
 ```javascript
-if(request.headers.cookie !== undefined) {
-  var cookies = cookie.parse(req.headers.cookie);
+var cookies = {};
+if(req.headers.cookie !== undefined) {
+    cookies = cookie.parse(req.headers.cookie);
 }
 ```
