@@ -113,9 +113,17 @@ console.log(resultAge);
 console.log();
 
 // 116
+// https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+
 const resultAverage = itArr.filter(item => item.department === 'development')
 .map(item => item.age)
 .reduce((previous, current, index, array) => previous + (current / array.length), 0);
+// ※ callback 함수의 파라미터 4개
+// previous : 배열의 첫 번째 파라미터 or 초기값
+// current : 배열 내 현재 처리되고 있는 값
+// index : current의 인덱스
+// array : 현재 사용되고 있는 배열
+
 const resultIt = itArr.filter(item => item.department === 'development');
 console.log(`${resultIt.length} * ${resultAverage} = ${resultIt.length * resultAverage}`);
 console.log(resultAverage);
