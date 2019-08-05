@@ -34,12 +34,13 @@ console.log(calMultiple(calAdd(10, 20))); // 900
 
 console.log();
 
-// 103 - 커링 curring
+// 103 - 커링 currying
 // node.js에는 비동기 실행이 많기에 return 값이 없는 대신 callback(콜백)을 인자로 넘겨서 사용하는데, 
-// 이때 curring 기법으로 중복을 최소화하며 개발 가능
+// 이때 currying 기법으로 중복을 최소화하며 개발 가능
 
 const add = x => y => `x : ${x}, y : ${y} => ${x+y}`;
 const add10 = add(10);
+console.log(add10);
 console.log(add10(20));
 console.log(add(60)(30));
 
@@ -62,18 +63,20 @@ console.log();
 // 105
 
 // console 창에서 가장 나중에 출력되는 게 방해돼서 주석처리
-// const fs = require('fs');
+const fs = require('fs');
 
-// const openFileAndPrint = path => fileName => fs.readFile(path + fileName, (err, data) => {
-//     if(err) throw err;
-//     console.log(data.toString().substring(0, 30) + "/"); // 파일 내용이 너무 길어서 자름
-// });
+const openFileAndPrint = path => fileName => fs.readFile(path + fileName, (err, data) => {
+    if(err) throw err;
+    console.log('start/');
+    console.log(data.toString().substring(0, 100)); // 파일 내용이 너무 길어서 자름
+    console.log('/end');
+});
 
-// const thisDirOpenFileAndPrint = openFileAndPrint('./');
-// const otherDirOpenFileAndPrint = openFileAndPrint('./');
+const thisDirOpenFileAndPrint = openFileAndPrint('./');
+const otherDirOpenFileAndPrint = openFileAndPrint('./');
 
-// thisDirOpenFileAndPrint('README.md'); // 나중 출력
-// otherDirOpenFileAndPrint('ex014.js'); // 먼저 출력
+thisDirOpenFileAndPrint('README.md'); // 나중 출력
+otherDirOpenFileAndPrint('ex014.js'); // 먼저 출력
 
 // console.log();
 
