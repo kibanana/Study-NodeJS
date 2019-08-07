@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}\\require.js",
+            "program": "${workspaceRoot}\\nodeMailerTest.js",
             "cwd": "${workspaceRoot}"
         }
     ]
