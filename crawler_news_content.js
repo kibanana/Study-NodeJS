@@ -1,18 +1,18 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
-const log = console.log;
 
-const getHtml = async () => {
+const getHtml = async (uri) => {
   try {
-    return await axios.get("http://www.etnews.com/news/section.html?id1=04");
+    return await axios.get(uri);
   } catch (error) {
     console.error(error);
   }
 };
 
-getHtml()
+let ulList = [];
+
+getHtml("http://www.etnews.com/news/section.html?id1=04")
   .then(html => {
-    let ulList = [];
     const $ = cheerio.load(html.data);
     const $bodyList = $("ul.list_news").children("li");
 
@@ -30,6 +30,26 @@ getHtml()
 
     const data = ulList.filter(n => n.title);
     return data;
-    
   })
-  .then(res => log(res));
+  .then(res => {
+    let i;
+    for (let i = 0; i < res.length-1; i++) {
+      item = res[i];
+      getHtml(item.url)
+      .then(html => {
+          const $ = cheerio.load(html.data);
+          const $bodyList = $("section.article_body");
+      
+          $bodyList.each(function() {
+              res[i].content = $(this).find('p').text();
+          });
+          
+          const data = ulList.filter(n => n.title);
+          return data[i];
+      })
+      .then((res) => {
+        console.log(res);
+        console.log('=============================');
+      });
+    }
+  });
