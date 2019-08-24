@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}\\crawler_keywords.js",
+            "program": "${workspaceRoot}\\crawler_news_content.js",
             "cwd": "${workspaceRoot}"
         }
     ]

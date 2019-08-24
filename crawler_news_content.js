@@ -1,6 +1,8 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 
+const crawler_keywords = require('./crawler_keywords.js');
+
 const getHtml = async (uri) => {
   try {
     return await axios.get(uri);
@@ -52,4 +54,5 @@ getHtml("http://www.etnews.com/news/section.html?id1=04")
         console.log('=============================');
       });
     }
-  });
+  })
+  .then(() => crawler_keywords());

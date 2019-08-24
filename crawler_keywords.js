@@ -10,7 +10,8 @@ const getHtml = async () => {
   }
 };
 
-getHtml()
+module.exports = function () {
+  getHtml()
   .then(html => {
     let ulList = [];
     const $ = cheerio.load(html.data);
@@ -32,3 +33,4 @@ getHtml()
     
   })
   .then(res => log(res));
+};
