@@ -71,7 +71,7 @@ const compare = (now, next) => {
     console.log('----------');
     console.log('now: ', now);
     console.log('next: ', next);
-}
+};
 
 // hungryList.sort(compare);
 
@@ -85,7 +85,7 @@ console.log(sliced);
 
 console.log();
 
-//088 - 왠지 object Object로 출력됨
+//088 - 왠지 object Object로 출력돼서 JSON.stringify 함
 console.log('Sort: ' + JSON.stringify(hungryList.sort((now, next) => now.age - next.age)));
 console.log('Reverse: ' + JSON.stringify(hungryList.reverse()));
 console.log('Sliced: ' + JSON.stringify(hungryList.slice(1,3)));
@@ -107,17 +107,17 @@ console.log();
 
 //090
 const capital = ['London', 'Seoul', 'Berlin'];
-console.log(capital.shift()); // London
+console.log(capital.shift()); // pop => London, 앞에서
 console.log(capital); // [ 'Seoul', 'Berlin' ]
-capital.unshift('Beijing');
+console.log(capital.unshift('Beijing')); // push, 앞으로
 console.log(capital); // [ 'Beijing', 'Seoul', 'Berlin' ]
 
 console.log();
 
 //091
 console.log(capital)
-console.log(capital.pop()); // Berlin
-console.log(capital.push('Tokyo')); // 3
+console.log(capital.pop()); // Berlin, 뒤에서
+console.log(capital.push('Tokyo')); // 3, 뒤로
 
 console.log();
 

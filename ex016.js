@@ -39,10 +39,12 @@ console.log();
 // 111
 const employeeArr = [
     {name: 'a', age: 20, salary: 2300},
-    {name: 'b', age: 20, salary: 4000},
-    {name: 'b', age: 20, salary: 4500}
+    {name: 'b', age: 23, salary: 4000},
+    {name: 'b', age: 27, salary: 4500}
 ];
-const mappedEmployeeArr = employeeArr.map(item => item.salary * 1.2);
+// const mappedEmployeeArr = employeeArr.map(item => item.salary * 1.2);
+const mappedEmployeeArr = employeeArr.map(item => item.name + '님의 나이는 '+ item.age + '이고 임금은 인센티브를 포함해 '+ item.salary + '만원 입니다.');
+// 새로운 배열이 생성되기 때문에 .map 을 한 배열의 원래 값은 상관없음
 mappedEmployeeArr.forEach(item => console.log(`I'm ${item.name}, ${item.age}. My salary is ${item.salary}`));
 mappedEmployeeArr.forEach(item => console.log(item));
 console.log();

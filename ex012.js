@@ -37,11 +37,13 @@ const order4 = {no:4, itemName:'슬랙스', price:'20000.50'};
 const concat1 = order1.price + order2.price;
 const sum1 = parseInt(order1.price, 10) + parseInt(order2.price, 10); // 10진수라는 뜻 - 10진수일 경우 생략 가능
 const sum2 = parseInt(order3.price, 10) + parseInt(order4.price, 10); //소수점 없어짐
+const sum3 = parseFloat(order3.price, 10) + parseFloat(order4.price, 10); //소수점 없어짐
 const sumNumber = Number(order3.price) + Number(order4.price); //소수점 있음
 
 console.log(concat1);
 console.log(sum1);
 console.log(sum2);
+console.log(sum3);
 console.log(sumNumber);
 
 console.log();

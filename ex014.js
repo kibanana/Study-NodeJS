@@ -49,6 +49,7 @@ console.log();
  const scores = [85,95,76];
 
 const sum = (list, total, idx) => {
+    console.log(`list: ${list}, totla: ${total}, idx: ${idx}`);
     if(idx === list.length) return total;
     return sum(list, total + list[idx], idx+1);
 };
