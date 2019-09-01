@@ -22,9 +22,6 @@ module.exports = function () {
           rank : $(this).find('span.ah_r').text(),
           keyword : $(this).find('span.ah_k').text()
       };
-      
-
-
       console.log($(this).find('span.ah_r').text());
     });
 

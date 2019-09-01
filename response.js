@@ -10,8 +10,10 @@ app.get('/sendfile', (req, res) => {
 app.get('/json', (req, res) => {
     fs.readFile(path.join(__dirname,'package.json'), (err, data) => {
         if(data) {
-            console.log(data);
-            res.json(JSON.stringify(data.toString()));
+            res.writeHead(200, {'Content-Type' : 'text/javascript'});
+            res.end(JSON.stringify(data.toString()));
+            // console.log(data);
+            // res.json(JSON.stringify(data.toString()));
         } else {
             const jsonError = {
                 "error" : "Can't read pacage.json"
