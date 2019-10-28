@@ -33,7 +33,7 @@ console.log(fruitResult);
 console.log();
 
 //034 - for of
-for(const fruit, let i of fruitList) {
+for(const fruit of fruitList) {
     console.log(fruit);
 }
 
