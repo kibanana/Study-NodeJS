@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}\\request_cheerio.js",
+            "program": "${file}",
             "cwd": "${workspaceRoot}"
         }
     ]

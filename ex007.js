@@ -33,15 +33,15 @@ console.log(fruitResult);
 console.log();
 
 //034 - for of
-for(const fruit of fruitList) {
+for(const fruit, let i of fruitList) {
     console.log(fruit);
 }
 
 console.log();
 
 //035 - forEach
-fruitList.forEach(function(fruit){
-    console.log(fruit)
+fruitList.forEach(function(fruit, i){
+    console.log(`${i} : ${JSON.stringify(fruit)}`);
 });
 console.log();
 fruitList.forEach(fruit => {console.log(fruit); console.log(`${fruit.name} is lovely!`); });
