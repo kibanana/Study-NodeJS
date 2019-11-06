@@ -18,6 +18,7 @@
   "homepage": "https://github.com/kyw017763/Study_NodeJS#readme",
   "dependencies": {
     "@babel/node": "^7.7.0",
+    "@babel/runtime": "^7.7.1",
     "axios": "^0.19.0",
     "charset": "^1.0.1",
     "cheerio": "^1.0.0-rc.3",
@@ -39,8 +40,14 @@
   "devDependencies": {
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.0",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.7.1",
+    "@babel/preset-flow": "^7.0.0",
+    "babel": "^6.23.0",
     "babel-eslint": "^10.0.3",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2"

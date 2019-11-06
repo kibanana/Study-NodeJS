@@ -1,8 +1,8 @@
-const express = require('express');
+import * as express from 'express';
+import * as path from 'path';
+import * as fs from 'fs';
 
 const app = express();
-const path = require('path');
-const fs = require('fs');
 
 app.get('/sendfile', (req, res) => {
   res.sendFile(path.join(__dirname, 'package.json'));
@@ -17,7 +17,7 @@ app.get('/json', (req, res) => {
       // res.json(JSON.stringify(data.toString()));
     } else {
       const jsonError = {
-        'error': "Can't read pacage.json",
+        error: "Can't read pacage.json",
       };
       res.json(jsonError);
     }

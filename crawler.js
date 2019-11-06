@@ -1,6 +1,6 @@
-import request from 'request';
+import * as request from 'request';
 import { decode } from 'iconv-lite';
-import charset from 'charset';
+import * as charset from 'charset';
 
 const crawler = (callback) => (queryString) => request({
   url: 'https://www.google.com/search',

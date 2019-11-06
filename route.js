@@ -1,5 +1,5 @@
-const express = require('express');
-const path = require('path');
+import * as express from 'express';
+import * as path from 'path';
 
 const router = express.Router(); // 라우터 분리
 

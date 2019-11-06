@@ -1,6 +1,3 @@
-import request from 'request';
-import iconv from 'iconv-lite';
-import charset from 'charset';
 import { load } from 'cheerio';
 
 const crawl = (callback) => (queryString) => {
