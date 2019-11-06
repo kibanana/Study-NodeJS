@@ -1,30 +1,29 @@
-//041
+/* eslint-disable no-undef */
+// 041
 try {
-    printMessage('hello');
+  printMessage('hello');
 } catch (e) {
-    console.log('error: ', e);
+  console.log('error: ', e);
 }
 console.log('program finished');
 
 console.log();
 
-//042
+// 042
 const printHello = () => console.log('hello');
 
 try {
-    printHello();
-} catch(e) {
-    console.error(e);
+  printHello();
+} catch (e) {
+  console.error(e);
 } finally {
-    console.log('finally 1');
+  console.log('finally 1');
 }
 
 try {
-    printBye();
-} catch(e) {
-    console.error(e);
+  printBye();
+} catch (e) {
+  console.error(e);
 } finally {
-    console.log('finally 2');
+  console.log('finally 2');
 }
-
-console.log();

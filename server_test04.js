@@ -1,5 +1,6 @@
-const express = require('express');
-const path = require('path');
+import * as express from 'express';
+import * as path from 'path';
+
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'html')));
@@ -9,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'html')));
 // ex ) http://localhost:3000/static/test02_main.html
 // 하지만 이 방법 안썼으니까 아래(get, sendFile)에서는 안쓰고 파일이름만 써서 접근할 수 있음
 
-//html은 폴더명
+// html은 폴더명
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'html', 'test02_main.html'));
 });

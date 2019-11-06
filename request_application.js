@@ -1,5 +1,5 @@
-const request = require('request');
-const iconv = require('iconv-lite');
+import * as request from 'request';
+import { decode } from 'iconv-lite';
 
 // request({
 //     url: 'https://www.google.co.kr',
@@ -9,10 +9,10 @@ const iconv = require('iconv-lite');
 // });
 
 request({
-    url: 'https://www.google.co.kr/search',
-    method: 'GET',
-    qs: {q:'김예원'}, // 선택적
-    encoding: null,
+  url: 'https://www.google.co.kr/search',
+  method: 'GET',
+  qs: { q: '김예원' }, // 선택적
+  encoding: null,
 }, (err, res, body) => {
-    console.log(iconv.decode(body, 'euc-kr'));
+  console.log(decode(body, 'euc-kr'));
 });

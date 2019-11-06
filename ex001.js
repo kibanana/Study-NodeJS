@@ -1,10 +1,10 @@
-//004
+// 004
 console.log('hello world!');
 console.log('hello world!', 'buy');
 console.warn(`this line ${'can make erroe'}`);
 console.log();
 
-//005
+// 005
 console.log('name: %s', 'Kim Yewon'); // 문자열
 console.log('age: %d', 31); // 정수
 console.log('pi: %d', 3.14); // 소수

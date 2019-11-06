@@ -1,20 +1,21 @@
-const client = require('cheerio-httpcli'); 
-let keyword = 'node.js';
-let resultLink = new Array();
-let resultTitle = new Array();
- 
-client.fetch('http://www.google.com/search', { q: keyword }, function (err, $, res, body) {
+import { fetch } from 'cheerio-httpcli';
+
+const keyword = 'node.js';
+const resultLink = [];
+const resultTitle = [];
+
+fetch('http://www.google.com/search', { q: keyword }, (err, $, res, body) => {
   // console.log(res.headers);
 
-  $('h3').each(function (idx) {
+  $('h3').each(() => {
     resultTitle.push($(this).text());
   });
-  
-  $('div#rso div.g div.rc div.r > a').each(function (idx) {
+
+  $('div#rso div.g div.rc div.r > a').each(() => {
     resultLink.push($(this).attr('href'));
   });
 
-  for(let i = 0; i < resultLink.length; i++) {
+  for (let i = 0; i < resultLink.length; i += 1) {
     console.log(`title: ${resultTitle[i]}`);
     console.log(`link: ${resultLink[i]}`);
     console.log('=======================');

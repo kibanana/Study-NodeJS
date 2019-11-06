@@ -1,4 +1,7 @@
-//021
+/* eslint-disable no-unused-expressions */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-plusplus */
+// 021
 const pi = 3.14;
 const name = 'Kim Yewon';
 console.log(typeof name);
@@ -10,7 +13,7 @@ console.log(typeof []); // object
 console.log(typeof {});
 console.log();
 
-//022
+// 022
 console.log(10 > 20);
 console.log(10 < 20);
 
@@ -33,32 +36,32 @@ console.log(number);
 console.log(string);
 console.log();
 
-//023
+// 023
 let numberChange = 1;
 
 console.log(numberChange);
 console.log(--numberChange);
-numberChange = numberChange+10;
+numberChange += 10;
 console.log(numberChange);
-numberChange = numberChange-5;
+numberChange -= 5;
 console.log(++numberChange);
 console.log();
 
-//024
+// 024
 const a = 5;
 const b = 6;
 
-if(a===5) {
-    console.log(a == 5);
-    console.log(a == b);
-    console.log(a == '5');
-    console.log(a === '5');
+if (a === 5) {
+  console.log(a == 5);
+  console.log(a == b);
+  console.log(a == '5');
+  console.log(a === '5');
 }
 // === 은 타입까지 비교
 
 console.log();
 
-//025
+// 025
 const value30 = 30;
 const value50 = 50;
 
@@ -71,10 +74,10 @@ console.log(value30 >= 30 || value50 >= 100);
 console.log(value30 >= 40 || value50 >= 100);
 console.log();
 
-//026
+// 026
 const num1 = 1;
 const num2 = 2;
-const list = [1,2,3,4];
+const list = [1, 2, 3, 4];
 const emptyList = [];
 
 const result = num1 > num2 ? 'num1 is bigger than num2' : 'num2 is bigger than num1';
@@ -87,4 +90,4 @@ arrLength > 0 ? console.log(list) : console.log('emptyList가 비었습니다');
 
 console.log();
 
-//End - chapter 01
+// End - chapter 01
