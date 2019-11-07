@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import * as request from 'request';
 import { decode } from 'iconv-lite';
 

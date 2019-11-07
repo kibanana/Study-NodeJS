@@ -1,28 +1,29 @@
-let Ajv = require('ajv');
-let ajv = new Ajv({allErrors: true});
+const Ajv = require('ajv');
 
-let schema = {
-    "properties": {
-        "name": {"type": "string"},
-        "options": { 
-            "type": "object",
-            "properties": {
-                "editOnlist": {"type": "boolean"},
-                "listType": {"type": "string"}
-            }
-        },
-        "useTabs": { "type": "boolean" },
-        "fields": {
-            "type": "object"
-        }
-    }
+const ajv = new Ajv({ allErrors: true });
+
+const schema = {
+  properties: {
+    name: { type: 'string' },
+    options: {
+      type: 'object',
+      properties: {
+        editOnlist: { type: 'boolean' },
+        listType: { type: 'string' },
+      },
+    },
+    useTabs: { type: 'boolean' },
+    fields: {
+      type: 'object',
+    },
+  },
 };
-let validate = ajv.compile(schema);
+const validate = ajv.compile(schema);
 
-let data = {
-	"name": 56
+const data = {
+  name: 56,
 };
 
-let valid = validate(data);
+const valid = validate(data);
 if (valid) console.log('Valid!');
-else console.log('Invalid: ' + ajv.errorsText(validate.errors));
+else console.log(`Invalid: ${ajv.errorsText(validate.errors)}`);
