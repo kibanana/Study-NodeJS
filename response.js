@@ -1,6 +1,7 @@
-import * as express from 'express';
 import * as path from 'path';
 import * as fs from 'fs';
+
+const express = require('express');
 
 const app = express();
 
