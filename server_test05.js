@@ -1,7 +1,7 @@
-import * as express from 'express';
-import * as path from 'path';
-import * as compression from 'compression';
-import * as cors from 'cors';
+import express from 'express';
+import path from 'path';
+import compression from 'compression';
+import cors from 'cors';
 
 const app = express();
 const route = require('./route.js');
