@@ -53,8 +53,7 @@
     "nodemailer-smtp-pool": "^2.8.3",
     "npm": "^6.13.0",
     "request": "^2.88.0",
-    "request-promise": "^4.2.5",
-    "yamljs": "^0.3.0"
+    "request-promise": "^4.2.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.0",
