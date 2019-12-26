@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-import * as _ from 'lodash';
+import _ from 'lodash';
 
 // find - 조건을 만족하는 컬렉션에서의 첫 번째 요소 찾음
 const users = [
@@ -16,17 +16,19 @@ const numbers = [10, 40, 230, 15, 18, 51, 1221];
 const resultNumber = _.filter(numbers, (num) => num % 3 === 0);
 console.log(resultNumber);
 
-// first and rest
+// first and last and rest
 const names = ['first', 'middle', 'last', 'suffix'];
 
 const firstName = _.first(names);
-// const otherNames = _.rest(names);
-
 console.log(firstName); // 'first'
-// console.log(otherNames); // [ 'middle', 'last', 'suffix' ]
+
+const lastName = _.last(names);
+console.log(lastName); // 'suffix'
+
+const otherNames = _.rest((what, resultNames) => `${what} ${_.initial(resultNames).join(', ')}`);
+console.log(otherNames(names));
 
 const [firstName2, ...otherNames2] = names;
-
 console.log(firstName2);
 console.log(otherNames2);
 
@@ -34,11 +36,15 @@ const arr = [1, 2, 3];
 
 // each
 _.each(arr, (value, index) => {
-  console.log(value);
+  console.log(`${index}: ${value}`);
 });
 
 arr.forEach((value, index) => {
-  console.log(value);
+  console.log(`${index}: ${value}`);
+});
+
+_.forEach(arr, (value, index) => {
+  console.log(`${index}: ${value}`);
 });
 
 _.forEach({ a: 1, b: 2 }, (value, key) => {
@@ -56,6 +62,9 @@ const resultPrime = _.includes(primes, 47);
 console.log(resultPrime);
 
 // uniq - 중복 제거
+const duplArr = [2, 5, 6, 3, 2, 4, 3];
+const resultDupl = _.uniq(duplArr);
+console.log(resultDupl);
 
 // compact - 배열에서 undefinded 혹은 falsy 값을 제거하는 유용한 함수
 const array = [undefined, 'cat', false, 434, '', 32.0];
@@ -76,5 +85,5 @@ console.log(_.map([4, 8], square));
 
 // some - 배열을 순회하면서 하나의 요소라도 특정한 조건을 만족하는지 테스트
 const elements = ['cat', 'dog', 'bat'];
-const resultElement = _.some(elements, (el) => el.startsWith('c'));
+const resultElement = _.some(elements, (el) => el.startsWith('v'));
 console.log(resultElement);
