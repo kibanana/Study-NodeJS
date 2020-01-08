@@ -44,9 +44,11 @@ const employeeArr = [
 ];
 // const mappedEmployeeArr = employeeArr.map(item => item.salary * 1.2);
 const mappedEmployeeArr = employeeArr.map((item) => `${item.name}님의 나이는 ${item.age}이고 임금은 인센티브를 포함해 ${item.salary}만원 입니다.`);
-// 새로운 배열이 생성되기 때문에 .map 을 한 배열의 원래 값은 상관없음
-mappedEmployeeArr.forEach((item) => console.log(`I'm ${item.name}, ${item.age}. My salary is ${item.salary}`));
 mappedEmployeeArr.forEach((item) => console.log(item));
+
+// 새로운 배열이 생성되기 때문에 .map 을 한 배열의 원래 값은 상관없음
+employeeArr.forEach((item) => console.log(`I'm ${item.name}, ${item.age}. My salary is ${item.salary}`));
+
 console.log();
 
 // 112
@@ -54,7 +56,7 @@ console.log();
 // 누적 계산
 const scoreArr = [90, 87, 100, 95];
 const scoreSum1 = scoreArr.reduce((a, b) => a + b);
-const scoreSum2 = scoreArr.reduce((a, b) => a + b, 85); // 첫 번째 호출에 첫 번째 인수 : 10
+const scoreSum2 = scoreArr.reduce((a, b) => a + b, 10); // 첫 번째 호출에 첫 번째 인수 : 10
 const scoreSum3 = scoreArr.reduce((a, b) => a + b, 0);
 console.log(scoreSum1);
 console.log(scoreSum2);
