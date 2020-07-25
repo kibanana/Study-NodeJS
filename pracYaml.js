@@ -2,8 +2,8 @@ import JSYAML from 'js-yaml';
 import fs from 'fs';
 import path from 'path';
 
-// fs.readFileSync 가 아닌, fs.readFile 사용 시 undefined 반환
-const pracNative = JSYAML.safeLoadAll(fs.readFileSync(path.join(__dirname, 'pracYaml.yml'), 'utf8', (err, data) => data));
+// fs.readFileSync 가 아니라 fs.readFile 사용 시 undefined 반환
+const pracNative = JSYAML.safeLoadAll(fs.readFileSync(path.join(__dirname, 'example.yml'), 'utf8', (err, data) => data));
 
 console.log(pracNative);
 

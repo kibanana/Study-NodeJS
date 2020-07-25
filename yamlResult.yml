@@ -1,26 +1,22 @@
 - student:
     favorite_subject: English
-    is_female: true
-    s_id: 3504
+    s_id: 1234
     teacher: someone
 - student:
     favorite_subject: English
-    is_female: ture
     s_id: 3504
     teacher: someone
 - me:
-    age: 18
+    age: 10
     family:
       - mom
       - dad
-      - sister
     home: Seoul
-    name: Woni
+    name: A
 - me:
-    age: 18
+    age: 10
     family:
       - mom
       - dad
-      - sister
     home: Seoul
-    name: Woni
+    name: A

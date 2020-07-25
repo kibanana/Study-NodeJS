@@ -1,0 +1,34 @@
+---
+student:
+  s_id: 1234
+  favorite_subject: "English"
+  teacher: "someone"
+...
+
+--- 
+student: 
+  s_id: 3504
+  favorite_subject: English
+  teacher: someone
+...
+
+---
+me:
+  name: "A"
+  age: 10
+  home: "Seoul"
+  family:
+  - mom
+  - dad
+...
+
+---
+me: {
+  name: "A",
+  age: 10,
+  home: "Seoul",
+  family: [
+    mom, dad
+  ]
+}
+...

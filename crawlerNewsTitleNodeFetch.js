@@ -1,9 +1,11 @@
-import * as axios from 'axios';
+import fetch from 'node-fetch';
 import * as cheerio from 'cheerio';
 
 const getHtml = async () => {
   try {
-    return await axios.get('http://www.etnews.com/news/section.html?id1=04');
+    return await fetch('http://www.etnews.com/news/section.html?id1=04')
+      // eslint-disable-next-line no-return-await
+      .then(async (res) => await res.text());
   } catch (error) {
     return error;
   }
@@ -12,7 +14,7 @@ const getHtml = async () => {
 getHtml()
   .then((html) => {
     const ulList = [];
-    const $ = cheerio.load(html.data);
+    const $ = cheerio.load(html);
     const $bodyList = $('ul.list_news').children('li');
 
     $bodyList.each((i, value) => {

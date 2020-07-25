@@ -17,9 +17,7 @@ fetch('http://www.google.com/search', { q: keyword }, (err, $, res, body) => {
     Object.assign(result[i] = result[i] || { title: '' }, temp);
   });
 
-  for (let i = 0; i < result.length; i += 1) {
-    console.log(`title : ${result[i].title}`);
-    console.log(`link : ${result[i].link}`);
-    console.log('=======================');
-  }
+  result.forEach((value) => {
+    console.log(JSON.stringify(value, null, 4));
+  });
 });
